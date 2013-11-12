@@ -12,8 +12,9 @@
   <tbody>
     <% @shows.each do |show| %>
       <tr>
-        <td><%=show.name%></td>
-        <td><%=show.picture%></td>
+        <td><%= show.name %></td>
+        <td><%= show.picture %></td>
+        <td><%= link_to "Edit", { :action => "edit", :controller => "shows", :id => show.id } %></td>
       </tr>
     <% end %>
   </tbody>

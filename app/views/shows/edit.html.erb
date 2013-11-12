@@ -1,0 +1,9 @@
+<h1>Update show</h1>
+<%= form_for(@show) do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+  <%= f.label :picture %>
+  <%= f.text_field :picture %>
+  <%= f.submit "Update" %>
+<% end %>
+<a href="/">Cancel</a>

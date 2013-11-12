@@ -18,4 +18,20 @@ class ShowsController < ApplicationController
       head(:unprocessable_entity)
     end
   end
+
+  def edit
+    @show = Show.find(params[:id])
+  end
+
+  def update
+    @show = Show.find(params[:id])
+    @show.update_attributes(show_params)
+    redirect_to "/"
+  end
+
+  private
+
+  def show_params
+    params.require(:show).permit(:name, :picture)
+  end
 end
